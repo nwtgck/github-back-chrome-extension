@@ -2,6 +2,8 @@
 
 A Chrome Extension which allows you to get initial commit on GitHub
 
+![demo gif](demo-img/demo.gif)
+
 ### 1. Clone this repository
 
 ```sh
