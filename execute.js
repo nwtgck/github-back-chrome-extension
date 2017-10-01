@@ -10,10 +10,12 @@ async function goToInitialCommit(){
 
   if(nCommitsElm){
     // The number of commits
-    const nCommits = parseInt(nCommitsElm.innerText);
+    const nCommits = parseInt(nCommitsElm.innerText.replace(',', ''));
+
+    console.log('nCommits', nCommits)
 
     const res = await fetch(`https://api.github.com/repos${window.location.pathname}/commits`)
-    
+
     const results = await Promise.all([res.headers.get('link'), res.json()])
 
     // Get commits
